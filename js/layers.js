@@ -82,6 +82,10 @@ addLayer("f", {
     resource: "fazcoins",                   // The name of this layer's main prestige resource.
     row: 1,                                 // The row this layer is on (0 is the first row).
 
+    hotkeys: [
+        {key: "f", description: "F: Reset for Fazcoins", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+    ],
+
     baseResource: "memes",                 // The name of the resource your prestige gain is based on.
     baseAmount() { return player.m.points },  // A function to return the current amount of baseResource.
 
@@ -98,6 +102,8 @@ addLayer("f", {
     },
 
     layerShown() { return true },          // Returns a bool for if this layer's node should be visible in the tree.
+
+    branches: ["m"],
 
     upgrades: {
         11: {
