@@ -20,7 +20,7 @@ addLayer("p", {
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
         gain = new Decimal(1)
-        gain = gaim.times(mult)
+        gain = gain.times(mult)
         return new Decimal(gain)
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
