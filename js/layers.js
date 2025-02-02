@@ -30,7 +30,7 @@ addLayer("p", {
         11: {
             title: "Double Down",
             description: "Double your point gain.",
-            cost: new Decimal(10),
+            cost: new Decimal(1),
         },
     },
 })
