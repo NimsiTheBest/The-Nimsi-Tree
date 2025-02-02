@@ -15,13 +15,10 @@ addLayer("p", {
     exponent: 0.5, // Prestige currency exponent
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
-        if (hasUpgrade('p', 11)) mult = mult.times(2)
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
-        gain = new Decimal(1)
-        gain = gain.times(mult)
-        return new Decimal(gain)
+        return new Decimal(1)
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
@@ -31,7 +28,7 @@ addLayer("p", {
     upgrades: {
         11: {
             title: "Double Down",
-            description: "Double your point gain.",
+            description: "Doubles your point gain.",
             cost: new Decimal(1),
         },
     },
