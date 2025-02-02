@@ -1,4 +1,4 @@
-addLayer("p", {
+addLayer("m", {
     name: "memes", // This is optional, only used in a few places, If absent it just uses the layer id.
     symbol: "M", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
@@ -40,7 +40,9 @@ addLayer("p", {
                 return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-            unlocked() { return hasUpgrade("m", 11); },
+            unlocked() { 
+                return hasUpgrade("m", 11); 
+            },
         },
         13: {
             title: "Anti-memes",
@@ -50,7 +52,9 @@ addLayer("p", {
                 return player.points.add(1).pow(0.15)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
-            unlocked() { return hasUpgrade("m", 12); },
+            unlocked() { 
+                return hasUpgrade("m", 12); 
+            },
         },
     },
 })
