@@ -17,6 +17,7 @@ addLayer("m", {
         let mult = new Decimal(1)
         if (hasUpgrade('m', 13)) mult = mult.times(upgradeEffect('m', 13))
         if (hasUpgrade('f', 11)) mult = mult.times(5)
+        if (hasUpgrade('m', 22)) mult = mult.times(upgradeEffect('m', 22))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -69,7 +70,7 @@ addLayer("m", {
             title: "Memeception",
             description: "Memes boost memes.",
             effect() {
-                return player.m.points.add(1).pow(0.05)
+                return player.m.points.add(1).pow(0.15)
             },
             cost: new Decimal(30),
             unlocked() { 
