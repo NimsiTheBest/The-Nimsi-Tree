@@ -18,11 +18,19 @@ addLayer("p", {
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
+        if (hasUpgrade('p', 11)) gain = gain.times(2)
         return new Decimal(1)
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
         {key: "p", description: "P: Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
-    layerShown(){return true}
+    layerShown(){return true},
+    upgrades: {
+        11: {
+            title: "Double Down",
+            description: "Double your point gain.",
+            cost: new Decimal(10),
+        },
+    },
 })
