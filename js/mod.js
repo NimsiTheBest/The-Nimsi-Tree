@@ -3,7 +3,7 @@ let modInfo = {
 	author: "Nimsi",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
-
+	id: "the memes tree & knuckles for the 3ds",
 	discordName: "",
 	discordLink: "",
 	initialStartPoints: new Decimal (10), // Used for hard resets and new players
