@@ -48,7 +48,7 @@ addLayer("m", {
         13: {
             title: "Anti-memes",
             description: "Increased memes gain based on your points.",
-            cost: new Decimal(8.5),
+            cost: new Decimal(7),
             effect() {
                 return player.points.add(1).pow(0.15)
             },
@@ -58,6 +58,25 @@ addLayer("m", {
             },
         },
         21: {
+            title: "Triple Trouble",
+            description: "3x point gain.",
+            cost: new Decimal(15),
+            unlocked() { 
+                return hasUpgrade("m", 12); 
+            },
+        },
+        22: {
+            title: "Memeception",
+            description: "Memes boost memes.",
+            effect() {
+                return player.m.points.add(1).pow(0.05)
+            },
+            cost: new Decimal(30),
+            unlocked() { 
+                return (hasUpgrade("m", 12) && hasUpgrade("m", 21)); 
+            },
+        },
+        53: {
             title: "FNaF memes",
             description: "Increased memes gain based on Fazcoins.",
             cost: new Decimal(15),
