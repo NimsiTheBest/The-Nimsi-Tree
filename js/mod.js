@@ -1,5 +1,5 @@
 let modInfo = {
-	name: "The Nimsi Tree",
+	name: "The Memes Tree",
 	author: "Nimsi",
 	pointsName: "points",
 	modFiles: ["layers.js", "tree.js"],
@@ -13,7 +13,7 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "1.0",
-	name: "Literally nothing",
+	name: "Meme Tree Update",
 }
 
 let changelog = `<h1>Changelog:</h1><br>
@@ -43,8 +43,8 @@ function getPointGen() {
 
 	let gain = new Decimal(1)
 	gain = new Decimal(1)
-	if (hasUpgrade('p', 11)) gain = gain.times(2)
-	if (hasUpgrade('p', 12)) gain = gain.times(upgradeEffect('p', 12))
+	if (hasUpgrade('m', 11)) gain = gain.times(2)
+	if (hasUpgrade('m', 12)) gain = gain.times(upgradeEffect('m', 12))
 	return gain
 }
 
